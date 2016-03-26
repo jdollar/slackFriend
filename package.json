@@ -1,0 +1,15 @@
+{
+  "name": "slackfriend",
+  "version": "0.0.1",
+  "description": "Bot to plus plus me all the time",
+  "main": "slackFriend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "bot"
+  ],
+  "author": "jdollar",
+  "license": "MIT"
+}
