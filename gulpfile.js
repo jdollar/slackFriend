@@ -1,4 +1,5 @@
 var gulp = require('gulp')
+var mocha = require('gulp-mocha')
 var rename = require('gulp-rename')
 var jshint = require('gulp-jshint')
 var del = require('del')
@@ -6,6 +7,11 @@ var fs = require('fs')
 
 gulp.task('clean', function() {
   del('./dest')
+})
+
+gulp.task('test', function() {
+  return gulp.src('test/*.js')
+            .pipe(mocha({reporter: "nyan"}))
 })
 
 gulp.task('lint', function() {
@@ -34,5 +40,5 @@ gulp.task('init', function() {
   }
 })
 
-gulp.task('default', ['lint', 'clean', 'copySource', 'copyConfig'], function() {
+gulp.task('default', ['lint', 'clean', 'copySource', 'copyConfig', 'test'], function() {
 })
