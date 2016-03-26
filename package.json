@@ -13,8 +13,8 @@
   "author": "jdollar",
   "license": "MIT",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-rename": "^1.2.2"
   }
 }

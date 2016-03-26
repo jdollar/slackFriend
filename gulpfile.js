@@ -1,12 +1,10 @@
 var gulp = require('gulp')
-var clean = require('gulp-clean')
 var rename = require('gulp-rename')
-
+var del = require('del')
 var fs = require('fs')
 
 gulp.task('clean', function() {
-	gulp.src('./dest', {read:false})
-		.pipe(clean())
+	del('./dest')
 })
 
 gulp.task('copySource', function() {
@@ -29,5 +27,5 @@ gulp.task('init', function() {
 	}
 })
 
-gulp.task('default', ['copySource', 'copyConfig'], function() {
+gulp.task('default', ['clean', 'copySource', 'copyConfig'], function() {
 })
