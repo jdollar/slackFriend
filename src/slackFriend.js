@@ -29,7 +29,7 @@
 			ws.on('message', function(data, flags) {
 				console.log(data)
 				for (var channel of channels) {
-					if (channel.name === 'general' && messagePosted == false) {
+					if (channel.name === 'general' && messagePosted === false) {
 						ws.send('{"id": 1, "type": "message", "channel": "' + channel.id + '", "text": "test"}')
 						messagePosted = true
 					}

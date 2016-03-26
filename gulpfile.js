@@ -1,10 +1,17 @@
 var gulp = require('gulp')
 var rename = require('gulp-rename')
+var jshint = require('gulp-jshint')
 var del = require('del')
 var fs = require('fs')
 
 gulp.task('clean', function() {
 	del('./dest')
+})
+
+gulp.task('lint', function() {
+	return gulp.src('./src/**/*.js')
+						.pipe(jshint({asi: true, esversion: 6}))
+						.pipe(jshint.reporter('default'))
 })
 
 gulp.task('copySource', function() {
@@ -27,5 +34,5 @@ gulp.task('init', function() {
 	}
 })
 
-gulp.task('default', ['clean', 'copySource', 'copyConfig'], function() {
+gulp.task('default', ['lint', 'clean', 'copySource', 'copyConfig'], function() {
 })
