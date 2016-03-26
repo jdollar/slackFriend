@@ -1,3 +1,4 @@
 {
-	token: "applicationTokenHere"
+	'token': 'applicationTokenHere',
+	'slackUsername': 'slackUsernameGoesHere'
 }

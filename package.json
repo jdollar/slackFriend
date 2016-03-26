@@ -11,5 +11,10 @@
     "bot"
   ],
   "author": "jdollar",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2"
+  }
 }
