@@ -11,7 +11,7 @@
     "slack",
     "bot"
   ],
-	"repository": "https://github.com/jdollar/slackFriend",
+  "repository": "https://github.com/jdollar/slackFriend",
   "author": "jdollar",
   "license": "MIT",
   "devDependencies": {
@@ -21,7 +21,6 @@
     "gulp-rename": "^1.2.2",
     "jshint": "^2.9.1",
     "mocha": "^2.4.5",
-    "mockery": "^1.4.1",
     "nock": "^7.7.2",
     "sinon": "^1.17.3"
   },
