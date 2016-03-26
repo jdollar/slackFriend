@@ -15,7 +15,7 @@ gulp //creates a dest dir with the correct config values and javascipt
 npm start
 ```
 
-Contributing
+#### Contributing
 Standard javascript style should be followed:
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
