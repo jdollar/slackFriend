@@ -2,6 +2,8 @@ var gulp = require('gulp')
 var clean = require('gulp-clean')
 var rename = require('gulp-rename')
 
+var fs = require('fs')
+
 gulp.task('clean', function() {
 	gulp.src('./dest', {read:false})
 		.pipe(clean())
@@ -16,6 +18,15 @@ gulp.task('copyConfig', function() {
 	gulp.src('./userProps/' + process.env.USER + '.json')
 		.pipe(rename('config/config.json'))
 		.pipe(gulp.dest('./dest'))
+})
+
+gulp.task('init', function() {
+	var devConfigFileName = process.env.USER + '.json'
+	if (!fs.existsSync('./userProps/' + devConfigFileName)) {
+		gulp.src('./userProps/template.json')
+			.pipe(rename(devConfigFileName))
+			.pipe(gulp.dest('./userProps'))
+	}
 })
 
 gulp.task('default', ['copySource', 'copyConfig'], function() {
