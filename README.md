@@ -1,11 +1,11 @@
-# slackFriend
+# SlackFriend
 Simple slack bot to plus plus my username all of the time
 
 
-How to use:
+####How to use:
 
 ```
-npm install --dev
+npm install
 gulp init //generates userProps/{username}.json
 update userProps/{username}.json to correct values
 * application token
@@ -13,6 +13,15 @@ update userProps/{username}.json to correct values
 * username for the person you want plus plused all of the time
 gulp //creates a dest dir with the correct config values and javascipt
 npm start
+```
+
+#### Unit test
+
+All test files are located under the test directory
+
+```
+npm install
+npm test
 ```
 
 #### Contributing
