@@ -4,13 +4,14 @@
   "description": "Bot to plus plus me all the time",
   "main": "server.js",
   "scripts": {
-		"start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp && node server.js",
+    "test": "mocha -R nyan"
   },
   "keywords": [
     "slack",
     "bot"
   ],
+	"repository": "https://github.com/jdollar/slackFriend",
   "author": "jdollar",
   "license": "MIT",
   "devDependencies": {
@@ -18,7 +19,11 @@
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.0",
     "gulp-rename": "^1.2.2",
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "mockery": "^1.4.1",
+    "nock": "^7.7.2",
+    "sinon": "^1.17.3"
   },
   "dependencies": {
     "ws": "^1.0.1"
