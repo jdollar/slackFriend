@@ -9,13 +9,13 @@ gulp.task('clean', function() {
 })
 
 gulp.task('lint', function() {
-	return gulp.src('./src/**/*.js')
+	return gulp.src('./lib/**/*.js')
 						.pipe(jshint({asi: true, esversion: 6}))
 						.pipe(jshint.reporter('default'))
 })
 
 gulp.task('copySource', function() {
-	gulp.src('./src/**/*.js')
+	gulp.src('./lib/**/*.js')
 		.pipe(gulp.dest('./dest'))
 })
 

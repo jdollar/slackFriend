@@ -1,5 +1,6 @@
 userProps/
 !userProps/template.json
 
+*.log
 node_modules
 dest/

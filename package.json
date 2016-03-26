@@ -2,8 +2,9 @@
   "name": "slackfriend",
   "version": "0.0.1",
   "description": "Bot to plus plus me all the time",
-  "main": "slackFriend.js",
+  "main": "server.js",
   "scripts": {
+		"start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
